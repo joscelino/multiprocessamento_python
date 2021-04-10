@@ -1,7 +1,7 @@
 """
 Fazer download das imagens dos 100 primeiros pokemons da API
 
-Tempo total (hh:mm:ss.ms) 0:00:11.561982
+Tempo total (hh:mm:ss.ms) 0:00:06.469827
 
 """
 
@@ -51,12 +51,12 @@ class Worker(Thread):
 
 def get_pool(n_th: int):
     """Retorna um numero n de Threads."""
-    return [Worker(target=target, queue=queue,name=f'Worker_{n}')
+    return [Worker(target=target, queue=queue, name=f'Worker_{n}')
             for n in range(n_th)]
 
 
 with timeit():
     get_urls()
-    thrs = get_pool(5)
+    thrs = get_pool(10)
     [th.start() for th in thrs]
     [th.join() for th in thrs]
