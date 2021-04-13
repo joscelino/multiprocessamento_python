@@ -8,7 +8,7 @@ from requests import get
 from functions import target, timeit
 
 
-base_url = 'https://pokeapi.co/api/v2/'
+BASE_URL = 'https://pokeapi.co/api/v2/'
 
 
 def get_urls():

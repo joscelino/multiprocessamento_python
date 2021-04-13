@@ -15,7 +15,7 @@ from os.path import exists
 from os import makedirs
 
 path = 'downloads'
-base_url = 'https://pokeapi.co/api/v2/'
+BASE_URL = 'https://pokeapi.co/api/v2/'
 
 if exists(path):
     rmtree(path)

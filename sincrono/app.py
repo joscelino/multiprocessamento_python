@@ -14,7 +14,7 @@ from pprint import pprint
 from requests import get
 
 path = 'downloads'
-base_url = 'https://pokeapi.co/api/v2/'
+BASE_URL = 'https://pokeapi.co/api/v2/'
 
 
 if exists(path):
